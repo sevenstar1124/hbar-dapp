@@ -14,6 +14,4 @@ In order with elements like:
 
 ´Gossip about gossip with virtual voting´
 
-![GIFHasgraph](https://raw.githubusercontent.com/RafaBlockDev/HBAR-DAPP/main/pages/assets/gif/Screen%20Record.gif)
-
-## Gradle project
+![GIFHasgraph](https://raw.githubusercontent.com/RafaBlockDev/HBAR-DAPP/main/client/pages/assets/gif/Screen%20Record.gif)

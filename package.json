@@ -1,0 +1,24 @@
+{
+  "name": "hbar-dapp",
+  "version": "1.0.0",
+  "description": "HBAR Dapp using HEDERA tools and development to build an complete DAPP.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaBlockDev/HBAR-DAPP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RafaBlockDev/HBAR-DAPP/issues"
+  },
+  "homepage": "https://github.com/RafaBlockDev/HBAR-DAPP#readme",
+  "dependencies": {
+    "@hashgraph/sdk": "^2.14.2",
+    "dotenv": "^16.0.1"
+  }
+}

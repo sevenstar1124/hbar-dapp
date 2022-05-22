@@ -2,6 +2,12 @@
 
 HBAR Dapp using HEDERA tools and development to build an complete DAPP.
 
+## Hashgraph consensus
+
+In order with elements like: - Transactino order - Event order - Consensus timestamp - Receive time - Active nodes: - At that time - Sent events - To many.
+
+´Gossip about gossip with virtual voting´
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

@@ -1,4 +1,4 @@
-const { Client, PrivateKey, AccountCreateTransaction, AccountBalanceQuery, Hbar} = require("@hashgraph/sdk");
+const { Client, PrivateKey, AccountCreateTransaction, AccountBalanceQuery, Hbar, TransferTransaction} = require("@hashgraph/sdk");
 require("dotenv").config();
 
 async function main() {
@@ -34,5 +34,27 @@ async function main() {
 
     console.log("💰 The new account balance is: " +accountBalance.hbars.toTinybars() +" tinybar.");
 
+    // Transfer transaction
+    const sendHbar = await new TransferTransaction()
+    .addHbarTransfer(myAccountId, Hbar.fromTinybars(-1000))
+    .addHbarTransfer(newAccountId, Hbar.fromTinybars(1000))
+    .execute(client);
+
+    // Verify the trasnfer transaction reached consensus
+    const transactionReceipt = await sendHbar.getReceipt(client);
+    console.log("🖊 The transfer transaction from my account to the new account was: ", transactionReceipt.status.toString());
+
+    // Get the updatd account balance
+    const queryCost = await new AccountBalanceQuery()
+    .setAccountId(newAccountId)
+    .getCost(client);
+
+    console.log("🧮 The const of query is: " + queryCost);
+
+    const getNewBalance = await new AccountBalanceQuery()
+    .setAccountId(newAccountId)
+    .execute(client);
+
+    console.log("The account balance after the transfer is: " + getNewBalance.hbars.toTinybars() + " tinnybar.")
 }
 main();
